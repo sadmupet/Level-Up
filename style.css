@@ -1,0 +1,148 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    
+    height: 100vh;
+    display:flex;
+    background:url(images/fondo-login.jpg);
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+
+} 
+
+.bienvenida{
+    position: relative;
+    text-align: center;
+    margin-top: 35px;
+    color: white;
+}
+
+.login-container {
+    
+    position:relative;
+    width: 400px;
+    height: 525px;      
+    padding:40px;
+    border-radius:20px ;  
+    backdrop-filter: blur(15px); 
+    background: rgb(91, 91, 91);
+    border: 1px solid rgb(65, 65, 65);
+    box-shadow: 0 15px 35px rgb(71, 71, 71);
+    text-align: center;
+    z-index: 10;
+    margin-top: 100px;
+    margin-right: 170px;
+
+}
+
+.login-container h2 {
+    margin-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    color:#ffffff;
+}
+
+.input-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input{
+    width: 100%;
+    padding:15px 20px;
+    background: rgb(114, 114, 114);
+    border: none;
+    outline: none;
+    border: 35px;
+    border-radius: 35px;
+    font-size: 15px;
+    color:white;
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-250%);
+    color: white;
+    font-size: 16px;
+
+}
+
+.recordar-luego{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: white;
+}
+
+.recordar-luego label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.recordar-luego input{
+    margin-right: 8px;
+}
+
+.recordar-luego a{
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.recordar-luego a:hover{
+    text-decoration: underline;
+}
+
+.enter-btn{
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(114, 114, 114);
+    border: none;
+    outline: none;
+    margin-top: -15px;
+    border-radius: 35px;
+    font-size: 15px;
+    color:white;
+    cursor: pointer;
+}
+
+.register-link{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+.register-link a{
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.register-link a:hover{
+    text-decoration: underline;
+}
+form {
+
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 100px;
+
+}
+
+
+.logo {
+
+    width: 25%;
+    height: 25%;
+
+}
