@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    background-image: url(images/mc_rain.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 1.5;
+}
+
+.logo-proportions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-proportions img {
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+}
+
+
+
+.cajita-registro {
+    position: relative;
+    height: 70%;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    background-color: white;
+}
+
+.cajita-registro .registro-titulo {
+    justify-content: center;
+    padding: 1rem 0;
+    color:rgb(0, 0, 0);
+}
+
+.input-group label{
+    width: 100%;
+    padding: 1rem 0;
+    width: 30%;
+    transform: translateY(-250%);
+}
+
+.input-group input {
+    width: 100%;
+    padding:10px 20px;
+    background: rgb(211, 211, 211);
+    border: none;
+    outline: none;
+    border: 30%;
+    border-radius: 35px;
+    font-size: 15px;
+    color:white;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10%
+}
