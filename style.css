@@ -1,148 +1,172 @@
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
+
 body {
-    
-    height: 100vh;
-    display:flex;
-    background:url(images/fondo-login.jpg);
-    background-size: cover;      
-    background-position: center;  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(images/fondo-login.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    padding: 20px;
+}
 
-} 
-
-.bienvenida{
-    position: relative;
+.logo {
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 35px;
-    color: white;
+}
+.logo img {
+    width: 190px;
+    max-width: 200%;
+    height: auto;
 }
 
 .login-container {
-    
-    position:relative;
-    width: 400px;
-    height: 525px;      
-    padding:40px;
-    border-radius:20px ;  
-    backdrop-filter: blur(15px); 
-    background: rgb(91, 91, 91);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(91, 91, 91, 0.95);
     border: 1px solid rgb(65, 65, 65);
     box-shadow: 0 15px 35px rgb(71, 71, 71);
     text-align: center;
     z-index: 10;
-    margin-top: 100px;
-    margin-right: 170px;
-
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* distribuye espacio entre elementos */
+    gap: 20px;
 }
 
 .login-container h2 {
+    font-size: 28px;
+    color: #fff;
+    text-align: left;
     margin-top: 25px;
-    font-size: 30px;
-    text-align: center;
-    color:#ffffff;
 }
 
-.input-group{
+/* Inputs con labels flotantes */
+.input-group {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-
-.input-group input{
+.input-group input {
     width: 100%;
-    padding:15px 20px;
+    padding: 15px 20px;
     background: rgb(114, 114, 114);
     border: none;
     outline: none;
-    border: 35px;
     border-radius: 35px;
     font-size: 15px;
-    color:white;
+    color: white;
+    transition: 0.3s;
 }
-
-.input-group label{
+.input-group input:focus {
+    background: rgb(130, 130, 130);
+}
+.input-group label {
     position: absolute;
     top: 50%;
     left: 20px;
-    transform: translateY(-250%);
-    color: white;
-    font-size: 16px;
-
+    transform: translateY(-50%);
+    color: #ddd;
+    font-size: 15px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(91, 91, 91, 0.95);
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
-.recordar-luego{
+/* Recordar y contraseña */
+.recordar-luego {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
     font-size: 14px;
     color: white;
+    flex-wrap: wrap;
 }
-
-.recordar-luego label{
+.recordar-luego label {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-
-.recordar-luego input{
+.recordar-luego input {
     margin-right: 8px;
 }
-
-.recordar-luego a{
+.recordar-luego a {
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
 }
-.recordar-luego a:hover{
+.recordar-luego a:hover {
     text-decoration: underline;
 }
 
-.enter-btn{
+/* Botón principal */
+.enter-btn {
     width: 100%;
     padding: 15px;
     background-color: rgb(114, 114, 114);
     border: none;
     outline: none;
-    margin-top: -15px;
     border-radius: 35px;
-    font-size: 15px;
-    color:white;
+    font-size: 16px;
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+.enter-btn:hover {
+    background-color: rgb(140, 140, 140);
 }
 
-.register-link{
-    text-align: center;
-    margin-top: 10px;
+/* Registro y Discord */
+.register-link {
+    margin-top: 15px;
     font-size: 14px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
-.register-link a{
+.register-link a {
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
 }
-.register-link a:hover{
+.register-link a:hover {
     text-decoration: underline;
 }
-form {
 
-    display:flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 100px;
+/* Responsividad */
+@media (max-width: 768px) {
+    .logo img { width: 120px; }
+    .login-container { padding: 30px 20px; }
+}
 
+@media (max-width: 480px) {
+    .logo img { width: 90px; }
+    .login-container { padding: 20px; }
+    .register-link { font-size: 12px; flex-direction: column; gap: 5px; }
 }
 
 
-.logo {
-
-    width: 25%;
-    height: 25%;
-
-}
