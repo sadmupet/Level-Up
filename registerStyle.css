@@ -6,9 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(0, 0, 0);
     background-image: url(images/mc_rain.gif);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     line-height: 1.5;
 }
@@ -25,23 +30,50 @@ body {
     height: auto;
 }
 
-
-
 .cajita-registro {
-    position: relative;
-    height: 70%;
-    padding: 30px;
+    width: 100%;
+    max-width:400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 25, 186, 0.95);
+    border: 5px solid rgb(183, 0, 255);
+    box-shadow: 0 15px 35px rgb(135, 34, 163);
+    text-align: center;
+    z-index: 10;
+    padding: 25px;
     border-radius: 30px;
     margin-top: 5%;
     margin-bottom: 5%;
-    justify-content: center;
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
 }
 
-.cajita-registro .registro-titulo {
-    justify-content: center;
+.registro-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+    width: 90%;
     padding: 1rem 0;
     color:rgb(0, 0, 0);
+}
+
+.registro-titulo h1 {
+    display: flex;
+    padding-top: 5px;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.registro-formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    width: 100%;
+    line-height: 2.5;
 }
 
 .input-group label{
@@ -61,6 +93,20 @@ body {
     border-radius: 35px;
     font-size: 15px;
     color:white;
+    margin-bottom: 10px;
+}
+
+.enter-btn {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgb(172, 172, 172);
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .login-link {
