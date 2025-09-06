@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link rel="stylesheet" href="registerStyle.css"/>
 </head>
+
 <body>
+
     <header>
         <div class="logo-proportions">
             <img src="images/logo.png" alt = "Logo level up"/>
@@ -15,46 +17,39 @@
     </header>
 
     <section class="cajita-registro">
-            
+
         <div class="registro-titulo">
             <h1>Registro</h1>
         </div>
+
         <div class="registro-formulario">
 
             <form id="registerForm">
 
                 <div class="input-group">
-
                     <label for="correo">Ingrese su correo.</label>
                     <input type="text" id="correo" name= "correo_registro" required/>
-
                 </div>
 
                 <div class="input-group">
-
                     <label for="contraseña">Cree la contraseña.</label>
                     <input type="password" id="contraseña"  name= "contraseña_registro" required minlength="6"/>
-
                 </div>
 
                 <div class="input-group">
-
                     <label for="contraseña_confirm">Confirme su contraseña.</label>
                     <input type="password" id="contraseña_confirm" name= "contraseña_confirm" required minlength="6"/>
-
                 </div>
 
                 <div class="input-group">
-
                     <label for="edad">Ingrese su edad.</label>
                     <input type="number" id="edad" name="edad_registro" min="0" mas="666" required/>
-
                 </div>
 
                 <button type="submit" class="enter-btn">Registrarse</button>
-                
+
             </form>
-            
+
             <div class="login-link">
                 <p>¿En realidad si tenias cuenta? <a href="index.html">Login</a></p>
                 <i class="fa-sharp-duotone fa-light fa-circle-user"></i>
@@ -65,7 +60,7 @@
 
     </section>
 
-    <script src="js/register_confirm.js"></script>
+    <script type="module" src="./js/register_confirm.js"></script>
 
 </body>
 </html>
