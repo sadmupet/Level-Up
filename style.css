@@ -20,19 +20,20 @@ body {
 }
 
 .logo {
-    margin-bottom: 16vh;
+    margin-bottom: 20px;
     text-align: center;
 }
 .logo img {
-    width: 210px;
+    width: 190px;
     max-width: 200%;
+    min-width: 190px;
     height: auto;
 }
 
 .login-container {
     width: 100%;
-    max-width: 55vh;
-    padding: 1rem;
+    max-width: 400px;
+    padding: 40px 30px;
     border-radius: 20px;
     backdrop-filter: blur(15px);
     background: rgba(91, 91, 91, 0.95);
@@ -40,8 +41,7 @@ body {
     box-shadow: 0 15px 35px rgb(71, 71, 71);
     text-align: center;
     z-index: 10;
-    margin-top: -7%;
-    min-height: 480px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -52,10 +52,9 @@ body {
     font-size: 28px;
     color: #fff;
     text-align: left;
-    margin-top: 35px;
-    padding-left: 1vh;
-}
 
+    margin-top: 25px;
+}
 
 .input-group {
     position: relative;
@@ -96,7 +95,7 @@ body {
     border-radius: 5px;
 }
 
-
+/* Recordar y contraseña */
 .recordar-luego {
     display: flex;
     justify-content: flex-start;
@@ -124,7 +123,6 @@ body {
     text-decoration: underline;
 }
 
-
 .enter-btn {
     width: 100%;
     padding: 15px;
@@ -142,6 +140,7 @@ body {
     background-color: rgb(140, 140, 140);
 }
 
+/* Registro y Discord */
 .register-link {
     margin-bottom: 15px;
     font-size: 14px;
@@ -160,16 +159,39 @@ body {
     text-decoration: underline;
 }
 
+.dafawk {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
 
+.dafawk img {
+    display: none;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+}
+
+.mostrarGato {
+    width: 3%;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
     .logo img { width: 120px; }
     .login-container { padding: 30px 20px; }
 }
+
 
 @media (max-width: 480px) {
     .logo img { width: 90px; }
     .login-container { padding: 20px; }
     .register-link { font-size: 12px; flex-direction: column; gap: 5px; }
 }
+
+
 
 
