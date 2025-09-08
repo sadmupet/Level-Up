@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
     if (password.value !== confirmacion.value) { 
         e.preventDefault();
         alert("¡Las contraseñas no coinciden!");
+        // confirmacion.textContent = "¡Las contraseñas no coinciden!"; el mensaje no se ve :'v
         confirmacion.focus();
         return;
     }
@@ -29,7 +30,7 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    // se crea una objeto usuario y se agrega al array de usuarios
+    // se crea una objeto usuario y se agrega al array de usuarios, en vola no es asi pq el profe lo guardo en un local storage
     const nuevoUsuario = new Usuario(correo.value, password.value, parseInt(edad.value));
     usuarios.push(nuevoUsuario);
 
@@ -46,6 +47,6 @@ form.addEventListener("submit", (e) => {
     // y bno esto muestra a los usuarios, por eso esta puesto el e.preventDefault() al inicio
     console.log(usuarios);
 
-    window.location.href = "firstpage.html"; // esto redirige a la pagina principal despues de registrarce
+    window.location.href = "firstpage.html"; // esto redirige a la pagina principal despues de registrarse
     
 })

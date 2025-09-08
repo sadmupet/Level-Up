@@ -6,6 +6,8 @@
     <title>Register - LEVEL-UP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link rel="stylesheet" href="registerStyle.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <audio src="audio/el_circo.mp3" id="el-circo"></audio>
 </head>
 
 <body>
@@ -15,6 +17,11 @@
             <img src="images/logo.png" alt = "Logo level up"/>
         </div>
     </header>
+
+    <section class="payaso">
+        <img src="images/llamada-del-circo.gif" alt = "Payaso"/>
+        <button class="mostrarPayaso">secreto</button>
+    </section>
 
     <section class="cajita-registro">
 
@@ -60,7 +67,16 @@
 
     </section>
 
+    <script>
+        $(document).ready (function() {
+            $(".mostrarPayaso").click(function(){
+                $(".payaso img").slideToggle("slow");
+            })
+        });
+    </script>
+
     <script type="module" src="./js/register_confirm.js"></script>
+    <script type="module" src="./js/fix.js"></script>
 
 </body>
 </html>

@@ -6,11 +6,20 @@
     <title>LEVEL-UP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <audio src="audio/go-kitty-go.mp3" id="kitty"></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="logo">
         <img src="images/logo.png" alt="logo level up"/>
     </div>
+
+    <section class="dafawk">
+        <img src="images/kitty.gif" alt="kitty-go"/>
+        <button class="mostrarGato">secreto</button>
+
+    </section>
+    
     
     <div class="login-container">
         <h2>Inicio de sesion</h2>            
@@ -41,5 +50,15 @@
 
     </div>
  
+    <script>
+        $(document).ready (function() {
+            $(".mostrarGato").click(function(){
+                $(".dafawk img").slideToggle("slow");
+            })
+        });
+    </script>
+
+    <script type="module" src="./js/fix2.js"></script>
+
 </body>
 </html>

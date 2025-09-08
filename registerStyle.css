@@ -113,3 +113,24 @@ body {
     text-align: center;
     margin-top: 10%
 }
+
+.payaso {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.payaso img {
+    display: none;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+}
+
+.mostrarPayaso {
+    width: 3%;
+    height: 20px;
+    opacity: 0;
+    background-color: rgb(47, 43, 7);
+    border: none;
+}
