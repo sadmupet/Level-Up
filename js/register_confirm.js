@@ -41,9 +41,11 @@ form.addEventListener("submit", (e) => {
     }
 
     // esto resetea el formulario
-    form.reset();
+    // form.reset(); // esto lo dejo como texto por si se usa despues...
 
     // y bno esto muestra a los usuarios, por eso esta puesto el e.preventDefault() al inicio
     console.log(usuarios);
 
+    window.location.href = "firstpage.html"; // esto redirige a la pagina principal despues de registrarce
+    
 })
