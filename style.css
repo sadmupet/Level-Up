@@ -43,7 +43,7 @@ body {
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distribuye espacio entre elementos */
+    justify-content: space-between; 
     gap: 20px;
 }
 
@@ -54,7 +54,7 @@ body {
     margin-top: 25px;
 }
 
-/* Inputs con labels flotantes */
+
 .input-group {
     position: relative;
     margin-bottom: 25px;
@@ -94,7 +94,7 @@ body {
     border-radius: 5px;
 }
 
-/* Recordar y contraseña */
+
 .recordar-luego {
     display: flex;
     justify-content: space-between;
@@ -121,7 +121,7 @@ body {
     text-decoration: underline;
 }
 
-/* Botón principal */
+
 .enter-btn {
     width: 100%;
     padding: 15px;
@@ -138,7 +138,7 @@ body {
     background-color: rgb(140, 140, 140);
 }
 
-/* Registro y Discord */
+
 .register-link {
     margin-top: 15px;
     font-size: 14px;
@@ -171,13 +171,14 @@ body {
 }
 
 .mostrarGato {
+    
     width: 3%;
     height: 20px;
     background-color: rgb(0, 0, 0);
     border: none;
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
     .logo img { width: 120px; }
     .login-container { padding: 30px 20px; }

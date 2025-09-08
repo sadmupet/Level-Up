@@ -1,0 +1,98 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url(images/fondo-login.jpg);
+    background-size: cover;
+    background-color: #121212;
+    color: #eee;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    position: fixed;  
+    top: 0;           
+    left: 0;          
+    width: 100%;      
+    background-color: #1a1a1a;
+    justify-content: space-between; 
+    align-items: center;          
+    padding: 4px 20px;
+    color: white;
+    z-index: 1000;                
+}
+
+.container {
+    display: flex;              
+    align-items: center;        
+    justify-content: space-between; 
+    width: 100%;  
+    gap: 10px;                          
+    padding: 10px 20px;          
+    margin: 0;  
+}
+
+.logo-titulo {
+    display: flex;         
+    align-items: center;   
+    gap: 10px;
+}
+
+.logo-titulo h1 {
+    font-size: 35px;
+    color: #fff !important;
+    margin: 0;
+}
+
+.logo {
+    margin-left: 10px;
+    width: 100px;        
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    margin-right: 40px;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-extra {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+footer {
+  width: 100%;
+  margin-top: 40rem;
+  background: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 1rem; 
+}
+
