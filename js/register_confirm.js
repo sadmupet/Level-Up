@@ -4,7 +4,6 @@ import Usuario from "./usuarios.js";
 const form = document.getElementById("registerForm");
 const password = document.getElementById("contraseña");
 const confirmacion = document.getElementById("contraseña_confirm");
-const correo = document.getElementById("correo");
 const edad = document.getElementById("edad");
 
 let usuarios = [];

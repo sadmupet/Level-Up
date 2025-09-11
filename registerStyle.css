@@ -11,12 +11,21 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    background-image: url(images/mc_rain.gif);
+    background-image: url(images/mc_snow.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     line-height: 1.5;
 }
+
+
+header {
+    background-color: rgb(61, 96, 111);
+    width: 100%;
+    padding: 15px 10px;
+    opacity: 100%;
+}
+
 
 .logo-proportions {
     display: flex;
@@ -26,7 +35,7 @@ body {
 
 .logo-proportions img {
     width: 60%;
-    max-width: 500px;
+    max-width: 200px;
     height: auto;
 }
 
