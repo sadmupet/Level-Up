@@ -6,11 +6,10 @@ const password = document.getElementById("contraseña");
 const confirmacion = document.getElementById("contraseña_confirm");
 const edad = document.getElementById("edad");
 
-let usuarios = [];
 
 form.addEventListener("submit", (e) => {
     
-    e.preventDefault(); // Esto evita el envio del formulario asi se puede validar que se agregaron correctamente los usuarios
+    e.preventDefault(); // evita el envio automatico del formulario. es lo mismo con los otros, si falla una validacion no se envia
     
     // validacion de que las contraseñas coincidan
     if (password.value !== confirmacion.value) { 
@@ -29,9 +28,11 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    // se crea una objeto usuario y se agrega al array de usuarios, en vola no es asi pq el profe lo guardo en un local storage
+    // se crea una objeto usuario
     const nuevoUsuario = new Usuario(correo.value, password.value, parseInt(edad.value));
-    usuarios.push(nuevoUsuario);
+
+    // se guarda en el local storage
+    nuevoUsuario.user_data_save();
 
     // de la funcion que esta en usuarios.js se valida si es estudiante o no
     if (nuevoUsuario.esEstudiante()){
@@ -40,11 +41,8 @@ form.addEventListener("submit", (e) => {
         alert("¡Registro existoso!");
     }
 
-    // esto resetea el formulario
-    // form.reset(); // esto lo dejo como texto por si se usa despues...
-
-    // y bno esto muestra a los usuarios, por eso esta puesto el e.preventDefault() al inicio
-    console.log(usuarios);
+    // muestra a los usuarios del local storage
+    console.log(Usuario.info_users());
 
     window.location.href = "firstpage.html"; // esto redirige a la pagina principal despues de registrarse
     
