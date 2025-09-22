@@ -20,6 +20,7 @@ form.addEventListener("submit", (e) => {
         window.location.href = "firstpage.html"; // redirigir a la pagina principal
     } else {
         alert("Correo o contraseña incorrectos");
+        alert("Intenta con estos: " + JSON.stringify(Usuario.info_users()));
     }
 
 })
