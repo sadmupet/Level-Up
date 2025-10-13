@@ -1,5 +1,4 @@
 import logo from '../images/logo.png';
-import '../css/firstpage.css';
 
 
 export default function RegisterH() {
