@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-body {
+/* body {
     flex-direction: column;
     background: url(public/fondo-login.jpg);
     background-size: cover;
@@ -14,7 +14,7 @@ body {
     color: #eee;
     scroll-behavior: smooth;
     font-family: 'Segoe UI', sans-serif;
-}
+} */
 
 
 header {

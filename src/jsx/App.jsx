@@ -1,23 +1,21 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import FirstpageH from './FirstpageH.jsx'
-import FirstpageContent from './FirstpageContent.jsx'
-import FirstpageFooter from './FirstpageFooter.jsx'
+// import { useState } from 'react'
+// import viteLogo from '/vite.svg'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
+import FirstPage from '../pages/FirstPage.jsx'
+import Register from '../pages/Register.jsx'
 
 function App() {
 
   return (
-    <>
-      <header>
-        <FirstpageH />
-      </header>
-      <div>
-        <FirstpageContent />
-      </div>
-      <footer>
-        <FirstpageFooter />
-      </footer>
-    </>
+    
+    <Router>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
+    
   )
 }
 
