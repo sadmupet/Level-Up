@@ -1,67 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEVEL-UP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
-    <audio src="audio/go-kitty-go.mp3" id="kitty"></audio>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <div class="logo">
-        <img src="images/logo.png" alt="logo level up"/>
-    </div>
-
-    <section class="dafawk">
-        <img src="images/kitty.gif" alt="kitty-go"/>
-        <button class="mostrarGato">secreto</button>
-    </section>
-    
-    
-    <div class="login-container">
-        <h2>Inicio de sesion</h2>            
-        
-        <form id="login-form">
-            <div class="input-group">
-                <input type="text" id="correo" required>
-                <label>Correo</label>
-            </div>
-
-            <div class="input-group">
-                <input type="password" id="contraseña" required>
-                <label>Contraseña</label>
-            </div>
-
-            <div class="recordar-luego">
-                <label><input type="checkbox"> Recordarme</label>
-                <a href="#">Olvidaste la contraseña?</a>
-            </div>
-
-          
-            <button type="submit" class="enter-btn">Ingresar</button>
-            
-
-            <div class="register-link">   
-                <p>No tienes una cuenta? <a href="register.html">Registrarse</a></p>
-                <i class="fa-brands fa-discord"></i>                
-            </div>
-        </form>
-
-    </div>
- 
-    <script>
-        $(document).ready (function() {
-            $(".mostrarGato").click(function(){
-                $(".dafawk img").slideToggle("slow");
-            })
-        });
-    </script>
-
-    <script type="module" src="./js/fix2.js"></script>
-    <script type="module" src="./js/login.js"></script>
-
-
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>level-up-tiendagamer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
