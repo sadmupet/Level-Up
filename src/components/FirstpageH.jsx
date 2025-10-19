@@ -38,7 +38,7 @@ export default function FirstpageH() {
 
             <nav>
                 <ul>
-                    <li><Link to="/register">Log In</Link></li>
+                    <li><Link to="/login">Log In</Link></li>
                     <li><Link to="/register">Register</Link></li>
                 </ul>
             </nav>
