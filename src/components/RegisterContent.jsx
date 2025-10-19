@@ -37,25 +37,36 @@ export default function RegisterContent() {
             return;
         }
 
-        // desde este punto todo fue un fokin exito
 
-        setError('');
-
+        
         const newUser = {
             email: email,
             password: password,
             edad: edad,
         };
+        
+        let validacion = JSON.parse(localStorage.getItem('user', JSON.stringify(newUser)));
+
+        if (validacion.email === email) {
+            setError('Ese correo ya existe.');
+            setExito('');
+            return;
+        }
 
         localStorage.setItem('user', JSON.stringify(newUser));
+        
 
         console.log(newUser);
-
+        
+        // desde este punto todo fue un fokin exito
+        
         let usuarioExistente = JSON.parse(localStorage.getItem('user'));
-
+        
         if (usuarioExistente.email.endsWith('@duocuc.cl')){
             setExito('Registro exitoso como estudiante DUOC UC. ¡Obtiene descuentos exclusivos!')
+            setError('');
         } else {
+            setError('');
             setExito('¡Registro exitoso!')
         }
 
