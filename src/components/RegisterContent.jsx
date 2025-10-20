@@ -79,69 +79,68 @@ export default function RegisterContent() {
 
   return (
 
-    <section className={style.sectionRegister}>
-        <div className={style.cajitaRegistro}>
+    <div className={style.cajitaRegistro}>
 
-            <h1>Registro</h1>
+        <h1>Registro</h1>
 
-            <form onSubmit={manejoSubmit}>
+        <form onSubmit={manejoSubmit}>
 
-                <div className={style.inputGroupe}>
+            <div className={style.inputGroupe}>
 
-                    <label htmlFor="correo">Ingrese su correo:</label>
-                    <input type="email" 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-
-                </div>
-
-                <div className={style.inputGroupe}>
-
-                    <label htmlFor="contraseña">Cree la contraseña:</label>
-                    <input type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-
-                </div>
-
-                <div className={style.inputGroupe}>
-
-                    <label htmlFor="contraseña_confirm">Confirme su contraseña:</label>
-
-                    <input type="password" 
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)} 
-                    />
-
-                </div>
-
-                <div className={style.inputGroupe}>
-
-                    <label htmlFor="edad">Ingrese su edad:</label>
-                    <input 
-                        type="number" 
-                        value={edad}
-                        onChange={(e) => setEdad(e.target.value)}
-                    />
-
-                </div>
-
-                <button type="submit" className={style.enterBtn}>Registrarse</button>
-                {exito && <p className= {style.exitoMsg}>{exito}</p>}
-                {error && <p className= {style.errorMsg} >{error}</p>}
-
-            </form>
-
-            <div className={style.loginLink}>
-
-                <p className={style.Parraf}>¿En realidad si tenias cuenta?</p>
-                <Link to="/login" className={style.Link}>Login</Link>
+                <label htmlFor="correo">Ingrese su correo:</label>
+                <input type="email" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
 
             </div>
 
+            <div className={style.inputGroupe}>
+
+                <label htmlFor="contraseña">Cree la contraseña:</label>
+                <input type="password" 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+
+            </div>
+
+            <div className={style.inputGroupe}>
+
+                <label htmlFor="contraseña_confirm">Confirme su contraseña:</label>
+
+                <input type="password" 
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                />
+
+            </div>
+
+            <div className={style.inputGroupe}>
+
+                <label htmlFor="edad">Ingrese su edad:</label>
+                <input 
+                    type="number" 
+                    value={edad}
+                    onChange={(e) => setEdad(e.target.value)}
+                />
+
+            </div>
+
+            <button type="submit" className={style.enterBtn}>Registrarse</button>
+            {exito && <p className= {style.exitoMsg}>{exito}</p>}
+            {error && <p className= {style.errorMsg} >{error}</p>}
+
+        </form>
+
+        <div className={style.loginLink}>
+
+            <p className={style.Parraf}>¿En realidad si tenias cuenta?</p>
+            <Link to="/login" className={style.Link}>Login</Link>
+
         </div>
-    </section>
+
+    </div>
+
   )
 }

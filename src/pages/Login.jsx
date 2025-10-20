@@ -10,9 +10,13 @@ function Login() {
       <header>
         <FirstpageH />
       </header>
-      <div>
-        <LoginContent />
+
+      <div className={style.bodyLogin}>
+        <div>
+          <LoginContent />
+        </div>
       </div>
+
       <footer>
         <FirstpageFooter />
       </footer>

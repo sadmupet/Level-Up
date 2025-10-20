@@ -11,9 +11,18 @@ function Register() {
       <header>
           <FirstpageH />
       </header>
-      <div>
-          <RegisterContent />
+
+      <div className={style.bodyRegister}>
+        
+        <div>
+            <RegisterContent />
+        </div>
+        <div className={style.divHolaa}>
+          <h3>HOLAA</h3>
+        </div>
+
       </div>
+
       <footer>
         <FirstpageFooter />
       </footer>

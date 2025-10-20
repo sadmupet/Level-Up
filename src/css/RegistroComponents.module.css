@@ -1,20 +1,18 @@
-
+/* 
 .sectionRegister {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw; 
     height: 100vh;
-}
+} */
 
 .cajitaRegistro {
     position: relative;
-    top: -200px;
+    top: 0;
     left: 0;
-    margin: auto;
+    margin: 0;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     flex-direction: column;
     height: 600px;
     width: 500px;

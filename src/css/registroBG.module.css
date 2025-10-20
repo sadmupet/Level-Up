@@ -11,3 +11,19 @@
     pointer-events: none;
     z-index: -1;
 }
+
+.bodyRegister {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.divHola {
+    height: 100px;
+    width: 100px;
+    float: right;
+}
