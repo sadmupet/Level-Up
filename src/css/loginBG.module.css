@@ -1,18 +1,18 @@
-.bgRegister {
+.bgLogin {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw; 
     height: 100vh; 
     display: flex;
-    background-image: url(/mc_night.gif);
+    background-image: url(/mc_snow.gif);
     background-position: center;
     background-size: cover;
     pointer-events: none;
     z-index: -1;
 }
 
-.bodyRegister {
+.bodyLogin {
     position: relative;
     z-index: 1;
     display: flex;
@@ -22,13 +22,7 @@
     height: 100vh;
 }
 
-.divHola {
-    height: 100px;
-    width: 100px;
-    float: right;
-}
-
-.registerContent {
+.loginContent {
     position: relative;
     margin-top: 8%;
     margin-left: 5%;

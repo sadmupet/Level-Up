@@ -25,39 +25,37 @@ export default function LoginContent() {
 
 
   return (
-    <section className={style.sectionPapa}>
 
-      <div className={style.loginContainerUwU}>
-        <h1>Login</h1>
-        <form onSubmit={manejoLogin}>
-          <div className={style.divLoginGroup}>
-            <label>Correo:</label>
-            <input type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className={style.divLoginGroup}>
-            <label>Contraseña:</label>
-            <input type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            /> 
-          </div>
-
-          <button type="submit" className={style.btnLog}>Lock In</button>
-          {error && <p className={style.errorMsg}>{error}</p>}
-        </form>
-
-        <div className={style.registerLink}>
-
-                <p className={style.Parraf}>¿No tienes cuenta?</p>
-                <Link to="/register" className={style.Link}>Registrarme</Link>
-
+    <div className={style.loginContainerUwU}>
+      <h1>Login</h1>
+      <form onSubmit={manejoLogin}>
+        <div className={style.divLoginGroup}>
+          <label>Correo:</label>
+          <input type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
+        <div className={style.divLoginGroup}>
+          <label>Contraseña:</label>
+          <input type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          /> 
+        </div>
+
+        <button type="submit" className={style.btnLog}>Lock In</button>
+        {error && <p className={style.errorMsg}>{error}</p>}
+      </form>
+
+      <div className={style.registerLink}>
+
+              <p className={style.Parraf}>¿No tienes cuenta?</p>
+              <Link to="/register" className={style.Link}>Registrarme</Link>
 
       </div>
 
-    </section>
+    </div>
+      
   )
 }

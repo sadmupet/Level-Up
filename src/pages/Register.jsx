@@ -14,9 +14,10 @@ function Register() {
 
       <div className={style.bodyRegister}>
         
-        <div>
+        <div className={style.registerContent}>
             <RegisterContent />
         </div>
+        
         <div className={style.divHolaa}>
           <h3>HOLAA</h3>
         </div>

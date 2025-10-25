@@ -1,10 +1,10 @@
 import LoginContent from '../components/LoginContent'
 import FirstpageH from '../components/FirstpageH'
-import style from '../css/LoginContainer.module.css'
+import style from '../css/loginBG.module.css'
 import FirstpageFooter from '../components/FirstpageFooter'
 
 function Login() {
-  return (
+  return (  
     <>
       <div className={style.bgLogin}></div>
       <header>
@@ -12,9 +12,11 @@ function Login() {
       </header>
 
       <div className={style.bodyLogin}>
-        <div>
+
+        <div className={style.loginContent}>
           <LoginContent />
         </div>
+      
       </div>
 
       <footer>
