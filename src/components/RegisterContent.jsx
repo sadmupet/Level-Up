@@ -46,7 +46,7 @@ export default function RegisterContent() {
         };
         
         
-        let usuarioExistente = JSON.parse(localStorage.getItem('user'));
+        let usuarioExistente = localStorage.getItem('user');
         
         let validacion = usuarioExistente ? JSON.parse(usuarioExistente.JSON) : null;
         
