@@ -45,9 +45,12 @@ export default function RegisterContent() {
             edad: edad,
         };
         
-        let validacion = JSON.parse(localStorage.getItem('user', JSON.stringify(newUser)));
-
-        if (validacion.email === email) {
+        
+        let usuarioExistente = JSON.parse(localStorage.getItem('user'));
+        
+        let validacion = usuarioExistente ? JSON.parse(usuarioExistente.JSON) : null;
+        
+        if (validacion && validacion.email === email) {
             setError('Ese correo ya existe.');
             setExito('');
             return;
@@ -60,7 +63,6 @@ export default function RegisterContent() {
         
         // desde este punto todo fue un fokin exito
         
-        let usuarioExistente = JSON.parse(localStorage.getItem('user'));
         
         if (usuarioExistente.email.endsWith('@duocuc.cl')){
             setExito('Registro exitoso como estudiante DUOC UC. ¡Obtiene descuentos exclusivos!')
