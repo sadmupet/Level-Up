@@ -36,27 +36,29 @@ export default function RegisterContent() {
             setExito('');
             return;
         }
-
-
+        
         
         const newUser = {
             email: email,
             password: password,
             edad: edad,
         };
-        
-        
-        let usuarioExistente = localStorage.getItem('user');
-        
-        let validacion = usuarioExistente ? JSON.parse(usuarioExistente.JSON) : null;
-        
+
+        const usuarioExistenteJSON = localStorage.getItem('user');
+
+        let validacion = usuarioExistenteJSON ? JSON.parse(usuarioExistenteJSON) : null;
+
         if (validacion && validacion.email === email) {
             setError('Ese correo ya existe.');
             setExito('');
             return;
         }
-
+        
         localStorage.setItem('user', JSON.stringify(newUser));
+        
+        let usuarioExistente = JSON.parse(localStorage.getItem('user'));
+        
+        
         
 
         console.log(newUser);
