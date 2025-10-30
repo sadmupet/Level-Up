@@ -16,14 +16,14 @@ export default function FirstpageH() {
 
             <nav>
                 <ul>
-                    <li><Link to="/register">Log In</Link></li>
-                    <li><Link to="/register">Log In</Link></li>
+                    <li><Link to="/register">Sobre nosotros</Link></li>
+                    <li><Link to="/register">login</Link></li>
                     <li>
                         <a href="#">Productos ▼</a>
                         <ul>
-                            <li><Link to="/register">Log In</Link></li>
-                            <li><Link to="/register">Log In</Link></li>
-                            <li><Link to="/register">Log In</Link></li>
+                            <li><Link to="/computadores">Computadoras</Link></li>
+                            <li><Link to="/register">Sillas</Link></li>
+                            <li><Link to="/register">Escritorios</Link></li>
                         </ul>
                     </li>
                 </ul>

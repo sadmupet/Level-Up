@@ -4,7 +4,7 @@ export default function FirstpageFooter() {
     <footer>
         <div class="info-extra">
             <p>Email: ola@gmail.com</p>
-            <p>Instagram: @wekitosgamer</p>
+            <p>Instagram: @coryskott</p>
             <p>Ubicación: Santiago, Chile</p>
         </div>
     </footer>  
