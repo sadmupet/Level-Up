@@ -1,5 +1,5 @@
 import React from "react";
-import CardProductos from "./cardProductos";
+import CardProductos from "./CardProductos";
 import "../css/computadoresPage.css";
 
 export default function GridProductos({ productos, onAgregar }) {
