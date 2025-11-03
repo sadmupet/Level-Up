@@ -18,9 +18,7 @@ function Register() {
             <RegisterContent />
         </div>
         
-        <div className={style.divHolaa}>
-          <h3>HOLAA</h3>
-        </div>
+
 
       </div>
 
