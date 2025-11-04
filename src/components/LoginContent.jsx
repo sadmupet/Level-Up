@@ -1,12 +1,15 @@
 import { useState } from "react"
 import style from "../css/LoginContainer.module.css"
 import { Link } from 'react-router-dom'
+import { useAuth } from '../jsx/AuthContext'
 
 export default function LoginContent() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  const { login } = useAuth();
 
   const manejoLogin = (e) => {
     e.preventDefault();
@@ -16,6 +19,7 @@ export default function LoginContent() {
     // si pasa el if se envia alerta de exito
     if (userLog && userLog.email === email && userLog.password === password) {
       setError('');
+      login();
       alert('Exito.');
     } else {
       setError('Contraseña o Email incorrectas.');

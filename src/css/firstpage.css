@@ -8,7 +8,7 @@
 
 body {
     flex-direction: column;
-    background: url(public/fondo-login.jpg);
+    background: url(/fondo-login.jpg);
     background-size: cover;
     background-color: #121212;
     color: #eee;
