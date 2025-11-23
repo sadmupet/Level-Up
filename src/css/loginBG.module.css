@@ -1,0 +1,29 @@
+.bgLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    background-image: url(/mc_snow.gif);
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bodyLogin {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginContent {
+    position: relative;
+    margin-top: 8%;
+    margin-left: 5%;
+}
