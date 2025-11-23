@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "PC Gamer \"Atlas\"",
+    "description": "Computador de gama media con procesador Ryzen 5 y gráfica RTX 4060, optimizado para 1080p.",
+    "price": 950000,
+    "image": "https://picsum.photos/seed/pcgamer/600/600"
+  },
+  {
+    "id": 2,
+    "name": "Audífonos Gamer \"Eco\"",
+    "description": "Sonido envolvente 7.1 y micrófono con cancelación de ruido. Conexión USB y RGB.",
+    "price": 59990,
+    "image": "https://picsum.photos/seed/headset/600/600"
+  },
+  {
+    "id": 3,
+    "name": "Teclado Mecánico \"Hyperion\"",
+    "description": "Teclado 60% (compacto) con switches ópticos rojos, keycaps PBT y luces ARGB.",
+    "price": 74990,
+    "image": "https://picsum.photos/seed/keyboard/600/600"
+  },
+  {
+    "id": 4,
+    "name": "Mouse Gamer \"Specter\"",
+    "description": "Ratón ultra-ligero (65g) con diseño de panal, sensor óptico de 16,000 DPI y cable paracord.",
+    "price": 39990,
+    "image": "https://picsum.photos/seed/mouse/600/600"
+  },
+  {
+    "id": 5,
+    "name": "Mousepad XL \"Control\"",
+    "description": "Alfombrilla de tela extra grande (900x400mm) con superficie optimizada para control y bordes cosidos.",
+    "price": 19990,
+    "image": "https://picsum.photos/seed/mousepad/600/600"
+  },
+  {
+    "id": 6,
+    "name": "Monitor \"Horizon\" 24\"",
+    "description": "Pantalla 1080p (Full HD) con 165Hz de tasa de refresco y 1ms de respuesta, panel IPS.",
+    "price": 179990,
+    "image": "https://picsum.photos/seed/monitor/600/600"
+  }
+]

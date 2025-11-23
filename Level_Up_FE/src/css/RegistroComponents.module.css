@@ -1,0 +1,68 @@
+
+.cajitaRegistro {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 500px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 15px;
+}
+
+.cajitaRegistro h1 {
+    text-align: center;
+    padding: 20px
+}
+
+.cajitaRegistro p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.inputGroupe {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 40px;
+}
+
+.loginLink {
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 40px 20px;
+}
+
+.Link {
+    color: rgb(0, 255, 72);
+    margin: auto;
+}
+
+.Parraf {
+    margin: auto;
+}
+
+.enterBtn {
+    display: block;
+    background-color: #444444; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;    
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.exitoMsg {
+    color: rgb(0, 255, 72);
+}
+
+.errorMsg {
+    color: red;
+}
