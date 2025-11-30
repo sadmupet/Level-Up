@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import '../css/computadoresPage.css'
+import styles from '../css/Productos.module.css'
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
@@ -23,27 +23,27 @@ const Productos = () => {
   };
 
   return (
-    <div className="container"> 
-      <h1 className="title"> 
+    <div className={styles.container}>  
+      <h1 className={styles.title}>  
         {categoria ? `Categoría: ${categoria.toUpperCase()}` : "Catalogo Completo"}
       </h1>
 
       {productosFiltrados.length === 0 ? (
         <p style={{textAlign: 'center'}}>No hay productos aquí :(</p>
       ) : (
-        <div className="grid">  
+        <div className={styles.grid}>
           {productosFiltrados.map((producto) => (
-            <div key={producto.id} className="card-producto">
+            <div key={producto.id} className={styles.cardProducto}> 
               <img 
-                src={producto.thumbnailUrl || "/no-image.png"} 
+                src={producto.thumbnailUrl || "https://via.placeholder.com/300x200?text=Sin+Imagen"} 
                 alt={producto.nombre}
-                className="card-imagen"
+                className={styles.cardImagen} 
               />
               <h3>{producto.nombre}</h3>
               <p>{producto.descripcion}</p>
-              <strong className="card-precio">${formatPrecio(producto.precio)}</strong>
+              <strong className={styles.cardPrecio}>${formatPrecio(producto.precio)}</strong>
               <button 
-                className="card-btn"
+                className={styles.cardBtn}
                 onClick={() => alert(`Agregaste ${producto.nombre}`)}
               >
                 Añadir al carrito

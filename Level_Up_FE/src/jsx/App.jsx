@@ -6,6 +6,7 @@ import FirstPage from '../pages/FirstPage.jsx'
 import Register from '../pages/Register.jsx'
 import Login from '../pages/Login.jsx'
 import Productos from "../pages/Productos.jsx";
+import FirstpageH from '../components/FirstpageH.jsx';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     
     <Router>
+      <FirstpageH />
       <Routes>
         <Route path="/" element={<FirstPage />} />
         <Route path="/register" element={<Register />} />

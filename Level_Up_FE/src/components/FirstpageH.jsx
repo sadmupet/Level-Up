@@ -21,11 +21,8 @@ export default function FirstpageH() {
 
                 <nav>
                     <ul>
-                        {/*esto renderiza si estas locked in*/}
                         {isLoggedIn ?(
-
                             <>
-
                                 <li>
                                     <a href="#">Productos ▼</a>
                                     <ul>
@@ -58,16 +55,11 @@ export default function FirstpageH() {
                         ) : (
 
                             <>
-                            
-                                {/*y esto renderiza si no estas locked in*/}
                                 <li><Link to="/login">Log In</Link></li>
-                                <li><Link to="/register">Register</Link></li>
-                            
+                                <li><Link to="/register">Register</Link></li>                     
                             </>
-
                         )}
                     
-
                     </ul>
                 </nav>
 
