@@ -29,7 +29,7 @@ export default function FirstpageH() {
                                 <li>
                                     <a href="#">Productos ▼</a>
                                     <ul>
-                                        <li><Link to="/computadores">Computadoras</Link></li>
+                                        <li><Link to="/productos">Productos</Link></li>
                                         <li><Link to="/">Sillas</Link></li>
                                         <li><Link to="/">Escritorios</Link></li>
                                     </ul>

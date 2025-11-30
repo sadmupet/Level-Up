@@ -5,7 +5,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import FirstPage from '../pages/FirstPage.jsx'
 import Register from '../pages/Register.jsx'
 import Login from '../pages/Login.jsx'
-import Computadores from '../pages/Computadores.jsx'
+import Productos from "../pages/Productos.jsx";
+
 
 function App() {
 
@@ -16,7 +17,10 @@ function App() {
         <Route path="/" element={<FirstPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/computadores" element={<Computadores />} />
+
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/productos/:categoria" element={<Productos />} />
+
       </Routes>
     </Router>
     

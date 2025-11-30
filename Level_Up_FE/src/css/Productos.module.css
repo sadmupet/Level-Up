@@ -1,0 +1,80 @@
+.container {
+  padding: 20px;
+  max-width: 1200px; /* Centra el contenido en pantallas grandes */
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center; /* Centra el título */
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;         /* Agregado para ordenar verticalmente */
+  flex-direction: column; /* Agregado */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-color: #007bff; /* Un detalle visual bonito al pasar el mouse */
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Cambié 'cover' a 'contain' para que no se recorte el producto */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa; /* Fondo gris claro para las imágenes */
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #222;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  flex-grow: 1; /* Esto empuja el precio y botón al fondo de la tarjeta */
+}
+
+/* --- ESTA ES LA CLASE QUE FALTABA --- */
+.price {
+  display: block;
+  font-size: 1.25rem;
+  color: #28a745; /* Verde dinero */
+  font-weight: 800;
+  margin: 15px 0 5px 0;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
