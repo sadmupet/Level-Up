@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import styles from '../css/Productos.module.css'
+import { API_URL } from '../utils/urlConfig.js';
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
   const { categoria } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/productos")
+    fetch(`${API_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProductos(data))
       .catch((err) => console.error("Error cargando productos:", err));

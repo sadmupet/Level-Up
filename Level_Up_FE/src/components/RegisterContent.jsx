@@ -1,84 +1,81 @@
-// import '../css/registroStyle.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import style from '../css/RegistroComponents.module.css'
+import { API_URL } from '../utils/urlConfig'
 
 export default function RegisterContent() {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [edad, setEdad] = useState('');
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        edad: '',
+    })
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
     const [error, setError] = useState('');
     const [exito, setExito] = useState('');
 
     
-    const manejoSubmit = (e) => {
+    const manejoSubmit = async (e) => {
         e.preventDefault();
         
-        if (!email || !password || !confirmPassword || !edad){
+        // Validaciones
+        if (!formData.email || !formData.password || !formData.confirmPassword || !formData.edad) {
             setError('¡Rellena todos los campos!');
-            setExito('');
             return;
+        }
+        if (formData.password !== formData.confirmPassword) {
+            setError('Las contraseñas no coinciden.');
+            return;
+        }
+        if (parseInt(formData.edad) < 18) {
+             setError('Debes tener al menos 18 años.');
+             return;
         }
 
-        if (confirmPassword !== password) {
-            setError('Las contraseñas no coinsiden.');
-            setExito('');
-            return;
-        }
-        if (edad < 18) {
-            setError('Debes ser mayor de edad para registrarte. ¡Vete a jugar al roblox coño!.');
-            setExito('');
-            return;
-        } else if (edad > 777) {
-            setError('Edad no valida. Nadie vive mas que vegetta777.');
-            setExito('');
-            return;
-        }
-        
-        
-        const newUser = {
-            email: email,
-            password: password,
-            edad: edad,
+        setError('');
+        setExito('Procesando registro...');
+
+        const usuarioParaBackend = {
+            email: formData.email,
+            password: formData.password,
+            edad: parseInt(formData.edad)
         };
 
-        const usuarioExistenteJSON = localStorage.getItem('user');
+        try {
+            const response = await fetch(`${API_URL}/auth/register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(usuarioParaBackend)
+            });
 
-        let validacion = usuarioExistenteJSON ? JSON.parse(usuarioExistenteJSON) : null;
+            if (response.ok) {
+                setExito('¡Registro exitoso! Redirigiendo al Login...');
+                setTimeout(() => {
+                    navigate('/login');
+                }, 2000);
+            } else {
+                const errorText = await response.text(); 
+                setError('Error: ' + errorText);
+                setExito('');
+            }
 
-        if (validacion && validacion.email === email) {
-            setError('Ese correo ya existe.');
+        } catch (err) {
+            console.error(err);
+            setError('Error de conexión con el servidor.');
             setExito('');
-            return;
         }
-        
-        localStorage.setItem('user', JSON.stringify(newUser));
-        
-        let usuarioExistente = JSON.parse(localStorage.getItem('user'));
-        
-        
-        
-
-        console.log(newUser);
-        
-        // desde este punto todo fue un fokin exito
-        
-        
-        if (usuarioExistente.email.endsWith('@duocuc.cl')){
-            setExito('Registro exitoso como estudiante DUOC UC. ¡Obtiene descuentos exclusivos!')
-            setError('');
-        } else {
-            setError('');
-            setExito('¡Registro exitoso!')
-        }
-
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-        setEdad('');
-    
     }
 
   return (
@@ -90,58 +87,58 @@ export default function RegisterContent() {
         <form onSubmit={manejoSubmit}>
 
             <div className={style.inputGroupe}>
-
-                <label htmlFor="correo">Ingrese su correo:</label>
-                <input type="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                <label htmlFor="email">Ingrese su correo:</label>
+                <input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange} 
+                    required
                 />
-
             </div>
 
             <div className={style.inputGroupe}>
-
-                <label htmlFor="contraseña">Cree la contraseña:</label>
-                <input type="password" 
-                    value={password} 
-                    onChange={(e) => setPassword(e.target.value)}
+                <label htmlFor="password">Cree la contraseña:</label>
+                <input 
+                    type="password" 
+                    name="password"
+                    value={formData.password} 
+                    onChange={handleChange} 
+                    required
                 />
-
             </div>
 
             <div className={style.inputGroupe}>
-
-                <label htmlFor="contraseña_confirm">Confirme su contraseña:</label>
-
-                <input type="password" 
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                <label htmlFor="confirmPassword">Confirme su contraseña:</label>
+                <input 
+                    type="password" 
+                    name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleChange} 
+                    required
                 />
-
             </div>
 
             <div className={style.inputGroupe}>
-
                 <label htmlFor="edad">Ingrese su edad:</label>
                 <input 
                     type="number" 
-                    value={edad}
-                    onChange={(e) => setEdad(e.target.value)}
+                    name="edad"
+                    value={formData.edad}
+                    onChange={handleChange} 
+                    required
                 />
-
             </div>
 
             <button type="submit" className={style.enterBtn}>Registrarse</button>
-            {exito && <p className= {style.exitoMsg}>{exito}</p>}
-            {error && <p className= {style.errorMsg} >{error}</p>}
+            {exito && <p className={style.exitoMsg}>{exito}</p>}
+            {error && <p className={style.errorMsg}>{error}</p>}
 
         </form>
 
         <div className={style.loginLink}>
-
             <p className={style.Parraf}>¿En realidad si tenias cuenta?</p>
             <Link to="/login" className={style.Link}>Login</Link>
-
         </div>
 
     </div>

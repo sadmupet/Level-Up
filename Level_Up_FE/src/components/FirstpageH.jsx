@@ -2,7 +2,7 @@ import logo from '../images/logo.png'
 import carrito from '../images/carrito.svg'
 import '../css/firstpage.css'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../jsx/AuthContext'
+import { useAuth } from '../context/AuthContext'
 
 export default function FirstpageH() {
 

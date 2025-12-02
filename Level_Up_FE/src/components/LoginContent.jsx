@@ -1,7 +1,8 @@
 import { useState } from "react"
 import style from "../css/LoginContainer.module.css"
-import { Link } from 'react-router-dom'
-import { useAuth } from '../jsx/AuthContext'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+import { API_URL } from "../utils/urlConfig"
 
 export default function LoginContent() {
 
@@ -10,21 +11,39 @@ export default function LoginContent() {
   const [error, setError] = useState('');
 
   const { login } = useAuth();
+  const navigate = useNavigate();
 
-  const manejoLogin = (e) => {
+  const manejoLogin = async (e) => {
     e.preventDefault();
+    setError('');
 
-    let userLog = JSON.parse(localStorage.getItem('user'))
+    try {
+        const response = await fetch(`${API_URL}/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                email: email,    // Enviamos email
+                password: password // Enviamos password
+            })
+        });
 
-    // si pasa el if se envia alerta de exito
-    if (userLog && userLog.email === email && userLog.password === password) {
-      setError('');
-      login();
-      alert('Exito.');
-    } else {
-      setError('Contraseña o Email incorrectas.');
+        if (response.ok) {
+            // El backend devuelve: { id, email, rol, edad } (el rol se asigna solo como cliente)
+            const userData = await response.json();
+            
+            // AQUI SE GUARDA EN AuthContext
+            login(userData);
+            
+            navigate('/'); 
+
+        } else {
+            setError('Correo o contraseña incorrectos.');
+        }
+
+    } catch (err) {
+        console.error(err);
+        setError('Error: No se pudo conectar con el servidor.');
     }
-
   }
 
 
