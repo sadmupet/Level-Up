@@ -100,3 +100,104 @@
   background-color: #00cc52;
   transform: scale(1.03);
 }
+
+.pageWrapper {
+  min-height: 100vh;
+  background: #121212;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.linkCarrito {
+  text-decoration: none;
+}
+
+.btnCarrito {
+  background-color: #00ff66;
+  color: #121212;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCarrito:hover {
+  background-color: #00cc52;
+  transform: scale(1.05);
+}
+
+.btnAgregado {
+  background-color: #00cc52 !important;
+}
+
+.cargando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  color: #00ff66;
+  font-size: 1.5rem;
+}
+
+.sinProductos {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.stockDisponible {
+  color: #00ff66;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.stockAgotado {
+  color: #ff4444;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.btnDisabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  background-color: #666 !important;
+}
+
+.btnDisabled:hover {
+  transform: none !important;
+}
+
+.cardTitulo {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #00ff66;
+}
+
+.cardDescripcion {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 10px 0;
+  flex-grow: 1;
+  line-height: 1.4;
+}

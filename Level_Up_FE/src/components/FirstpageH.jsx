@@ -1,71 +1,79 @@
-import logo from '../images/logo.png'
-import carrito from '../images/carrito.svg'
-import '../css/firstpage.css'
-import { Link } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext'
+import logo from '../images/logo.png';
+import carritoIcon from '../images/carrito.svg';
+import '../css/firstpage.css';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { useCarrito } from '../context/CarritoContext';
 
 export default function FirstpageH() {
 
     const { isLoggedIn, logout } = useAuth();
-
+    const { obtenerCantidadTotal } = useCarrito();
 
     return (
-        <div className="header-space">
-
+        <header>
             <div className="container">
-                
+
                 <div className="logo-titulo">
-                    <img src= {logo} alt="logo level up" className="logo"/>
-                    <h1>Level-Up</h1>
+                    <Link to="/" className="logo-link">
+                        <img src={logo} alt="logo level up" className="logo" />
+                        <h1>Level-Up</h1>
+                    </Link>
                 </div>
 
                 <nav>
                     <ul>
-                        {isLoggedIn ?(
+
+                        {isLoggedIn ? (
                             <>
+                                
                                 <li>
                                     <a href="#">Productos ▼</a>
                                     <ul>
-                                        <li><Link to="/productos">Productos</Link></li>
-                                        <li><Link to="/">Sillas</Link></li>
-                                        <li><Link to="/">Escritorios</Link></li>
+                                        <li><Link to="/productos">Todos</Link></li>
+                                        <li><Link to="/productos/sillas">Sillas</Link></li>
+                                        <li><Link to="/productos/escritorios">Escritorios</Link></li>
                                     </ul>
                                 </li>
 
+                               
                                 <div className="cart_icon">
-                                    <Link to="/register">
-                                        <img src={carrito} alt="Carrito" width="32" height="32"></img>
-                                        <span className="cart_count">0</span>
+                                    <Link to="/carrito">
+                                        <img src={carritoIcon} alt="Carrito" />
+                                        <span className="cart_count">
+                                            {obtenerCantidadTotal()}
+                                        </span>
                                     </Link>
                                 </div>
-                            
+
+                              
                                 <li>
                                     <a href="#">Perfil ▼</a>
                                     <ul>
-                                        <Link to="/perfil">Mi Perfil</Link>
+                                        <li><Link to="/perfil">Mi Perfil</Link></li>
 
-                                        <button onClick={logout} className="logout-button">
-                                            Logout
-                                        </button>
+                                        <li>
+                                            <button 
+                                                onClick={logout} 
+                                                className="logout-button"
+                                            >
+                                                Logout
+                                            </button>
+                                        </li>
                                     </ul>
                                 </li>
-                                
+
                             </>
-
                         ) : (
-
                             <>
                                 <li><Link to="/login">Log In</Link></li>
-                                <li><Link to="/register">Register</Link></li>                     
+                                <li><Link to="/register">Register</Link></li>
                             </>
                         )}
-                    
+
                     </ul>
                 </nav>
-
-
             </div>
-        </div>
-
-    )
+        </header>
+    );
 }
