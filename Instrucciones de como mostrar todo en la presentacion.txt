@@ -1,0 +1,50 @@
+1. - Iniciar el BackEnd:
+
+	# 1. Ve a la carpeta del Backend
+	cd Level-Up/LevelUp-BackEnd
+
+	# 2. Enciende el servidor (Verás logs de Spring Boot)
+	java -jar target/LevelUp-0.0.1-SNAPSHOT.jar
+
+2. - Cambiar la IP en React:
+
+	# 1. Abre otra terminal (o usa otra pestaña) y ve al Frontend
+	cd ~/Level-Up/Level_Up_FE
+
+	# 2. Abre el editor nano en el archivo de configuración
+	nano src/utils/urlConfig.js
+
+	EJEMPLO: "http://IP_DE_AWS:8080/api"
+
+	export const API_URL = "http://54.196.206.42:8080/api";
+
+3. - Probar SWAGGER:
+
+	http://IP_DE_AWS:8080/swagger-ui/index.html
+
+4. - Revisar a los clientes:
+
+	# 1. Entrar a mysql
+	sudo mysql
+	
+	# 2. Entrar a la base de datos
+	USE level_up_db
+
+	# 3. Hacer la consulta
+	SELECT * FROM usuarios;
+
+EXTRA:
+
+SI POR ALGUNA RAZON SE NECESITA REINICIAR LA PAGINA DE 0
+
+# 1. Compilar el proyecto nuevo
+npm run build
+
+# 2. Borrar lo viejo de la carpeta pública
+sudo rm -rf /var/www/html/*
+
+# 3. Mover lo nuevo a la carpeta pública
+sudo cp -r dist/* /var/www/html/
+
+# 4. Reiniciar Nginx por si acaso
+sudo systemctl restart nginx
